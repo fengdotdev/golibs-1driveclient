@@ -30,6 +30,18 @@ var (
 	}
 )
 
+func UpdateConfig(clientID, clientSecret, redirectURI string) {
+	ClientID = clientID
+	ClientSecret = clientSecret
+	RedirectURI = redirectURI
+
+	conf.ClientID = ClientID
+	conf.ClientSecret = ClientSecret
+	conf.RedirectURL = RedirectURI
+}
+
+
+
 // Abre navegador y espera el callback
 func Authorize() *oauth2.Token {
 	url := conf.AuthCodeURL("state123", oauth2.AccessTypeOffline)
