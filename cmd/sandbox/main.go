@@ -6,7 +6,7 @@ import (
 
 func main() {
 
-	ModeConfig()
+	ModeRun()
 }
 
 func ModeConfig() {
